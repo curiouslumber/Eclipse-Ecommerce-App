@@ -1,4 +1,4 @@
-# ChatXL - An E-commerce Application built using Flutter
+# Eclipse - An E-commerce Application built using Flutter
 
 ## Technologies Used
 - Flutter and Dart
