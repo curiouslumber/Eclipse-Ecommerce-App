@@ -52,6 +52,9 @@ flutter:
     - family: Raleway-Bold
       fonts:
         - asset: fonts/Raleway/static/Raleway-Bold.ttf
+    - family: Raleway-Medium
+      fonts:
+        - asset: fonts/Raleway/static/Raleway-Medium.ttf
 
   # fonts:
   #   - family: Schyler
