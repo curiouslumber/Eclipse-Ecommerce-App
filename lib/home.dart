@@ -1,5 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:eclipse_ecommerce_app/catgories/electronics.dart';
+import 'package:eclipse_ecommerce_app/catgories/men.dart';
+import 'package:eclipse_ecommerce_app/catgories/women.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 import 'package:sizer/sizer.dart';
 
@@ -134,7 +138,9 @@ class _HomeState extends State<Home> {
                       backgroundColor:
                           const MaterialStatePropertyAll(Color(0xff222222)),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(() => const MenCategory());
+                    },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -165,7 +171,9 @@ class _HomeState extends State<Home> {
                       backgroundColor:
                           const MaterialStatePropertyAll(Color(0xff222222)),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(() => const WomenCategory());
+                    },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -196,13 +204,15 @@ class _HomeState extends State<Home> {
                       backgroundColor:
                           const MaterialStatePropertyAll(Color(0xff222222)),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(() => const ElectronicsCategory());
+                    },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
-                          'Eletronics',
+                          'Electronics',
                           style: TextStyle(fontSize: 8.sp),
                         )
                       ],
@@ -217,11 +227,164 @@ class _HomeState extends State<Home> {
           ),
         ),
         Container(
+          alignment: Alignment.center,
           height: 16.h,
           margin: EdgeInsets.only(left: 8.w, right: 8.w, top: 4.h, bottom: 2.h),
           decoration: BoxDecoration(
               color: const Color.fromARGB(255, 86, 123, 243),
               borderRadius: BorderRadius.circular(4.w)),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(left: 6.w, top: 1.h, bottom: 1.h),
+                    child: const Text(
+                      'Deals for You',
+                      style: TextStyle(
+                          color: Colors.white, fontFamily: 'Raleway-SemiBold'),
+                    ),
+                  ),
+                  const Spacer(
+                    flex: 1,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(right: 6.w),
+                    child: Icon(
+                      Icons.navigate_next_outlined,
+                      color: Colors.white,
+                      size: 6.w,
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 10.h,
+                    alignment: Alignment.topLeft,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(2.w)),
+                    width: 20.w,
+                    child: Stack(
+                      children: [
+                        Container(
+                          alignment: Alignment.bottomCenter,
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 0.5.w, vertical: 0.5.h),
+                          child: Image.network(
+                              'https://th.bing.com/th/id/OIP.d-7UFbAaPsT2y3dYpaKm1AHaFb?pid=ImgDet&rs=1'),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 1.h),
+                          padding: EdgeInsets.only(
+                              top: 0.6.w,
+                              bottom: 0.6.w,
+                              right: 1.2.w,
+                              left: 1.2.w),
+                          decoration: BoxDecoration(
+                              color: Colors.red,
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(2.w),
+                                  bottomRight: Radius.circular(2.w))),
+                          child: Text(
+                            '15% Off',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 9.sp,
+                                letterSpacing: 0.2,
+                                fontFamily: 'Raleway-Bold'),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 10.h,
+                    alignment: Alignment.topLeft,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(2.w)),
+                    width: 20.w,
+                    child: Stack(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.symmetric(vertical: 0.5.h),
+                          alignment: Alignment.center,
+                          child: Image.network(
+                              'https://cdn.shoplightspeed.com/shops/633289/files/24484145/apple-beats-by-dre-studio3-wireless-over-ear-headp.jpg'),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 1.h),
+                          padding: EdgeInsets.only(
+                              top: 0.6.w,
+                              bottom: 0.6.w,
+                              right: 1.2.w,
+                              left: 1.2.w),
+                          decoration: BoxDecoration(
+                              color: Colors.red,
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(2.w),
+                                  bottomRight: Radius.circular(2.w))),
+                          child: Text(
+                            '5% Off',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 9.sp,
+                                letterSpacing: 0.2,
+                                fontFamily: 'Raleway-Bold'),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 10.h,
+                    alignment: Alignment.topLeft,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(2.w)),
+                    width: 20.w,
+                    child: Stack(
+                      children: [
+                        Container(
+                          alignment: Alignment.center,
+                          child: Image.network(
+                              'https://i.pinimg.com/originals/a9/2d/5b/a92d5bf8e104850125c7b9950fca5efc.jpg'),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 1.h),
+                          padding: EdgeInsets.only(
+                              top: 0.6.w,
+                              bottom: 0.6.w,
+                              right: 1.2.w,
+                              left: 1.2.w),
+                          decoration: BoxDecoration(
+                              color: Colors.red,
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(2.w),
+                                  bottomRight: Radius.circular(2.w))),
+                          child: Text(
+                            '10% Off',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 9.sp,
+                                letterSpacing: 0.2,
+                                fontFamily: 'Raleway-Bold'),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ],
     );

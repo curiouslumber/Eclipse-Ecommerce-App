@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
                   icon: const Icon(
                     Icons.close,
                     size: 30,
-                    color: Color.fromARGB(255, 159, 182, 255),
+                    color: Color.fromARGB(255, 86, 123, 243),
                   ),
                   onPressed: () {
                     Navigator.pop(context);
@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
               margin: const EdgeInsets.only(right: 16.0),
               child: const Icon(Icons.shop))
         ],
-        foregroundColor: const Color.fromARGB(255, 171, 191, 255),
+        foregroundColor: const Color.fromARGB(255, 86, 123, 243),
         centerTitle: true,
         title: const Text(
           'Eclipse',
