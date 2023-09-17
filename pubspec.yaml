@@ -1,0 +1,66 @@
+name: eclipse_ecommerce_app
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^1.0.2
+  get:
+  carousel_slider: ^4.2.1
+  simple_shadow: ^0.3.1
+  sizer: ^2.0.15
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+  
+
+flutter:
+
+  
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - images/asuslaptop.png
+    - images/pattern.jpg
+    - images/dark-pattern.jpg
+  #   - images/a_dot_ham.jpeg
+
+  fonts:
+    - family: Raleway-Regular
+      fonts:
+        - asset: fonts/Raleway/static/Raleway-Regular.ttf
+    - family: Raleway-SemiBold
+      fonts:
+        - asset: fonts/Raleway/static/Raleway-SemiBold.ttf
+    - family: Raleway-Light
+      fonts:
+        - asset: fonts/Raleway/static/Raleway-Light.ttf
+    - family: Raleway-Bold
+      fonts:
+        - asset: fonts/Raleway/static/Raleway-Bold.ttf
+
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
