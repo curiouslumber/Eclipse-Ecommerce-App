@@ -33,22 +33,14 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        foregroundColor: const Color.fromARGB(255, 159, 182, 255),
+        foregroundColor: const Color(0xff3797C9),
         elevation: 0,
         backgroundColor: Colors.transparent,
       ),
       extendBodyBehindAppBar: true,
       body: Container(
         alignment: Alignment.center,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-              alignment: Alignment.topCenter,
-              image: AssetImage(
-                "images/dark-pattern.jpg",
-              ),
-              repeat: ImageRepeat.repeat,
-              fit: BoxFit.fitWidth),
-        ),
+        decoration: const BoxDecoration(color: Color(0xff222222)),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -77,16 +69,14 @@ class _RegisterPageState extends State<RegisterPage> {
                           Radius.circular(3.w),
                         ),
                         borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 159, 182, 255),
-                            width: 2.0),
+                            color: Color(0xff3797C9), width: 2.0),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(
                           Radius.circular(3.w),
                         ),
                         borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 159, 182, 255),
-                            width: 2.0),
+                            color: Color(0xff3797C9), width: 2.0),
                       ),
                       hintStyle: TextStyle(
                           color: Colors.white.withOpacity(0.3),
@@ -116,16 +106,14 @@ class _RegisterPageState extends State<RegisterPage> {
                           Radius.circular(3.w),
                         ),
                         borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 159, 182, 255),
-                            width: 2.0),
+                            color: Color(0xff3797C9), width: 2.0),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(
                           Radius.circular(3.w),
                         ),
                         borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 159, 182, 255),
-                            width: 2.0),
+                            color: Color(0xff3797C9), width: 2.0),
                       ),
                       hintStyle: TextStyle(
                           color: Colors.white.withOpacity(0.3),
@@ -165,16 +153,14 @@ class _RegisterPageState extends State<RegisterPage> {
                           Radius.circular(3.w),
                         ),
                         borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 159, 182, 255),
-                            width: 2.0),
+                            color: Color(0xff3797C9), width: 2.0),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(
                           Radius.circular(3.w),
                         ),
                         borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 159, 182, 255),
-                            width: 2.0),
+                            color: Color(0xff3797C9), width: 2.0),
                       ),
                       hintStyle: TextStyle(
                           color: Colors.white.withOpacity(0.3),
@@ -215,16 +201,14 @@ class _RegisterPageState extends State<RegisterPage> {
                           Radius.circular(3.w),
                         ),
                         borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 159, 182, 255),
-                            width: 2.0),
+                            color: Color(0xff3797C9), width: 2.0),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(
                           Radius.circular(3.w),
                         ),
                         borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 159, 182, 255),
-                            width: 2.0),
+                            color: Color(0xff3797C9), width: 2.0),
                       ),
                       hintStyle: TextStyle(
                           color: Colors.white.withOpacity(0.3),
@@ -241,7 +225,8 @@ class _RegisterPageState extends State<RegisterPage> {
               ElevatedButton(
                   style: const ButtonStyle(
                       backgroundColor: MaterialStatePropertyAll(
-                          Color.fromARGB(255, 86, 123, 243))),
+                    Color(0xff3797C9),
+                  )),
                   onPressed: () {},
                   child: const Text(
                     'Submit',

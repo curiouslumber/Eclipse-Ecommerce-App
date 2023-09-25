@@ -143,7 +143,10 @@ class _HomeState extends State<Home> {
                       children: [
                         Text(
                           'For Men',
-                          style: TextStyle(fontSize: 7.sp),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 7.sp,
+                              fontFamily: 'Raleway-SemiBold'),
                         )
                       ],
                     ),
@@ -173,7 +176,10 @@ class _HomeState extends State<Home> {
                       children: [
                         Text(
                           'For Women',
-                          style: TextStyle(fontSize: 7.sp),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 7.sp,
+                              fontFamily: 'Raleway-SemiBold'),
                         )
                       ],
                     ),
@@ -203,7 +209,10 @@ class _HomeState extends State<Home> {
                       children: [
                         Text(
                           'Electronics',
-                          style: TextStyle(fontSize: 7.sp),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 7.sp,
+                              fontFamily: 'Raleway-SemiBold'),
                         )
                       ],
                     ),
@@ -235,8 +244,8 @@ class _HomeState extends State<Home> {
                     child: Text(
                       'Deals for You',
                       style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'Raleway-SemiBold',
+                          color: const Color.fromARGB(220, 255, 255, 255),
+                          fontFamily: 'Raleway-Medium',
                           fontSize: 10.sp),
                     ),
                   ),
@@ -247,7 +256,7 @@ class _HomeState extends State<Home> {
                     margin: EdgeInsets.only(right: 3.w, bottom: 1.2.h),
                     child: Icon(
                       Icons.navigate_next_outlined,
-                      color: Colors.white,
+                      color: const Color.fromARGB(220, 255, 255, 255),
                       size: 6.w,
                     ),
                   ),

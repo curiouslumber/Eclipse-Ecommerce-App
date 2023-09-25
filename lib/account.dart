@@ -20,8 +20,8 @@ class AccountPage extends StatelessWidget {
               width: 80.w,
               child: ElevatedButton(
                   style: ButtonStyle(
-                    backgroundColor: const MaterialStatePropertyAll(
-                        Color.fromARGB(255, 86, 123, 243)),
+                    backgroundColor:
+                        const MaterialStatePropertyAll(Color(0xff3797C9)),
                     shape: MaterialStatePropertyAll(
                       RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(3.w)),
@@ -39,8 +39,8 @@ class AccountPage extends StatelessWidget {
               width: 80.w,
               child: ElevatedButton(
                   style: ButtonStyle(
-                    backgroundColor: const MaterialStatePropertyAll(
-                        Color.fromARGB(255, 86, 123, 243)),
+                    backgroundColor:
+                        const MaterialStatePropertyAll(Color(0xff3797C9)),
                     shape: MaterialStatePropertyAll(
                       RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(3.w)),

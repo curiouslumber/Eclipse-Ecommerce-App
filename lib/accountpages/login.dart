@@ -23,34 +23,24 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        foregroundColor: const Color.fromARGB(255, 171, 191, 255),
+        foregroundColor: const Color(0xff3797C9),
         elevation: 0,
         backgroundColor: Colors.transparent,
       ),
       extendBodyBehindAppBar: true,
       body: Container(
         alignment: Alignment.center,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-              alignment: Alignment.topCenter,
-              image: AssetImage(
-                "images/dark-pattern.jpg",
-              ),
-              repeat: ImageRepeat.repeat,
-              fit: BoxFit.fitWidth),
-        ),
+        decoration: const BoxDecoration(color: Color(0xff222222)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              child: Text(
-                'Login',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: 'Raleway-Regular',
-                    fontSize: 18.sp),
-              ),
+            Text(
+              'Login',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Raleway-Regular',
+                  fontSize: 18.sp),
             ),
             Container(
               alignment: Alignment.center,
@@ -65,15 +55,13 @@ class _LoginPageState extends State<LoginPage> {
                 decoration: InputDecoration(
                     enabledBorder: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(12.0)),
-                      borderSide: BorderSide(
-                          color: Color.fromARGB(255, 171, 191, 255),
-                          width: 2.0),
+                      borderSide:
+                          BorderSide(color: Color(0xff3797C9), width: 2.0),
                     ),
                     focusedBorder: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(12.0)),
-                      borderSide: BorderSide(
-                          color: Color.fromARGB(255, 171, 191, 255),
-                          width: 2.0),
+                      borderSide:
+                          BorderSide(color: Color(0xff3797C9), width: 2.0),
                     ),
                     hintStyle: TextStyle(
                         color: Colors.white.withOpacity(0.3),
@@ -103,20 +91,18 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       child: Icon(
                         _showPassword ? Icons.visibility : Icons.visibility_off,
-                        color: const Color.fromARGB(255, 171, 191, 255),
+                        color: const Color(0xff3797C9),
                       ),
                     ),
                     enabledBorder: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(12.0)),
-                      borderSide: BorderSide(
-                          color: Color.fromARGB(255, 171, 191, 255),
-                          width: 2.0),
+                      borderSide:
+                          BorderSide(color: Color(0xff3797C9), width: 2.0),
                     ),
                     focusedBorder: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(12.0)),
-                      borderSide: BorderSide(
-                          color: Color.fromARGB(255, 171, 191, 255),
-                          width: 2.0),
+                      borderSide:
+                          BorderSide(color: Color(0xff3797C9), width: 2.0),
                     ),
                     hintStyle: TextStyle(
                         color: Colors.white.withOpacity(0.3),
@@ -130,7 +116,8 @@ class _LoginPageState extends State<LoginPage> {
             ElevatedButton(
                 style: const ButtonStyle(
                     backgroundColor: MaterialStatePropertyAll(
-                        Color.fromARGB(255, 86, 123, 243))),
+                  Color(0xff3797C9),
+                )),
                 onPressed: () {},
                 child: const Text(
                   'Submit',
