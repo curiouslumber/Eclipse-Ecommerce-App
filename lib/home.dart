@@ -52,7 +52,7 @@ class _HomeState extends State<Home> {
               Icon(
                 Icons.search,
                 size: 7.w,
-                color: const Color(0xffD4E1E8),
+                color: const Color.fromARGB(223, 212, 225, 232),
               )
             ],
             backgroundColor: const MaterialStatePropertyAll(
@@ -61,7 +61,7 @@ class _HomeState extends State<Home> {
             textStyle: MaterialStatePropertyAll(TextStyle(
                 fontSize: 14.sp,
                 color: Colors.white,
-                fontFamily: 'Raleway-Regular')),
+                fontFamily: 'Raleway-Light')),
           ),
         ),
         Container(

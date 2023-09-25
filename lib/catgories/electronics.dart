@@ -50,7 +50,7 @@ class _ElectronicsCategoryState extends State<ElectronicsCategory> {
               margin: const EdgeInsets.only(right: 16.0),
               child: const Icon(Icons.shop))
         ],
-        foregroundColor: const Color.fromARGB(255, 171, 191, 255),
+        foregroundColor: const Color(0xff3797C9),
         centerTitle: true,
         title: const Text(
           'Eclipse',
@@ -62,16 +62,7 @@ class _ElectronicsCategoryState extends State<ElectronicsCategory> {
       extendBodyBehindAppBar: true,
       body: Container(
         padding: EdgeInsets.only(top: 14.h, left: 6.w, right: 6.w),
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            alignment: Alignment.topCenter,
-            image: AssetImage(
-              "images/dark-pattern.jpg",
-            ),
-            repeat: ImageRepeat.repeat,
-            fit: BoxFit.fitWidth,
-          ),
-        ),
+        decoration: const BoxDecoration(color: Color(0xff161616)),
         child: Column(
           children: [
             SearchBar(
@@ -84,9 +75,6 @@ class _ElectronicsCategoryState extends State<ElectronicsCategory> {
                 ),
               ),
               shape: MaterialStatePropertyAll(RoundedRectangleBorder(
-                side: const BorderSide(
-                  color: Color.fromARGB(255, 86, 123, 243),
-                ),
                 borderRadius: BorderRadius.circular(3.w),
               )),
               padding: MaterialStatePropertyAll(
@@ -108,21 +96,42 @@ class _ElectronicsCategoryState extends State<ElectronicsCategory> {
             ),
             Container(
               margin: EdgeInsets.only(top: 2.h),
-              height: 75.h,
+              height: 70.h,
               alignment: Alignment.center,
               child: isLoading
-                  ? const CircularProgressIndicator() // Display CircularProgressIndicator while loading
+                  ? const CircularProgressIndicator(
+                      color: Color(0xff3797C9),
+                    ) // Display CircularProgressIndicator while loading
                   : ListView.builder(
                       padding: EdgeInsets.zero,
                       itemCount: jsonData.length,
                       itemBuilder: (context, index) {
                         return Card(
+                          color: const Color(0xff161616),
                           margin: const EdgeInsets.all(10),
                           child: ListTile(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(3.w)),
+                            tileColor: const Color.fromARGB(255, 88, 88, 88),
                             contentPadding: const EdgeInsets.all(10),
-                            title: Text(jsonData[index]['title']),
-                            subtitle:
-                                Text('Price: \$${jsonData[index]['price']}'),
+                            title: Container(
+                              alignment: Alignment.centerLeft,
+                              padding: const EdgeInsets.only(right: 4.0),
+                              child: Text(
+                                jsonData[index]['title'],
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontSize: 12.sp,
+                                  color:
+                                      const Color.fromARGB(255, 236, 236, 236),
+                                ),
+                              ),
+                            ),
+                            trailing: Text(
+                              '\$${jsonData[index]['price']}',
+                              style: const TextStyle(color: Colors.white),
+                            ),
                           ),
                         );
                       },
