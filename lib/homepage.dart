@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
                   icon: const Icon(
                     Icons.close,
                     size: 30,
-                    color: Color.fromARGB(255, 86, 123, 243),
+                    color: Color(0xff3797C9),
                   ),
                   onPressed: () {
                     Navigator.pop(context);
@@ -51,15 +51,15 @@ class _HomePageState extends State<HomePage> {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         systemOverlayStyle: const SystemUiOverlayStyle(
-          systemNavigationBarColor: Color(0xff1D262D), // Navigation bar
-          statusBarColor: Color(0xff1D262D), // Status bar
+          systemNavigationBarColor: Color(0xff3C3C3C), // Navigation bar
+          statusBarColor: Color(0xff3C3C3C), // Status bar
         ),
         actions: [
           Container(
               margin: const EdgeInsets.only(right: 16.0),
               child: const Icon(Icons.shop))
         ],
-        foregroundColor: const Color.fromARGB(255, 86, 123, 243),
+        foregroundColor: const Color(0xff3797C9),
         centerTitle: true,
         title: const Text(
           'Eclipse',
@@ -71,15 +71,7 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         padding: EdgeInsets.only(top: 9.h),
         alignment: Alignment.topCenter,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-              alignment: Alignment.topCenter,
-              image: AssetImage(
-                "images/dark-pattern.jpg",
-              ),
-              repeat: ImageRepeat.repeat,
-              fit: BoxFit.fitWidth),
-        ),
+        decoration: const BoxDecoration(color: Color(0xff161616)),
         // color: const Color(0xff222222),
         child: Column(
           children: [
@@ -176,15 +168,12 @@ class BottomNavItem extends StatelessWidget {
         shape: const CircleBorder(),
         child: CircleAvatar(
           radius: avatarRadius,
-          backgroundColor: isSelected
-              ? const Color.fromARGB(255, 86, 123, 243)
-              : const Color(0xffFFFFFF),
+          backgroundColor:
+              isSelected ? const Color(0xff3797C9) : const Color(0xffFFFFFF),
           child: Icon(
             size: isSelected ? 8.w : 6.w,
             icon,
-            color: isSelected
-                ? Colors.white
-                : const Color.fromARGB(255, 86, 123, 243),
+            color: isSelected ? Colors.white : const Color(0xff3797C9),
           ),
         ),
       ),

@@ -31,29 +31,28 @@ class _HomeState extends State<Home> {
     return Column(
       children: [
         Container(
+          margin: EdgeInsets.only(top: 1.h),
           height: 7.h,
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: SearchBar(
             hintText: 'Search Eclipse',
             hintStyle: MaterialStatePropertyAll(
               TextStyle(
-                fontSize: 14.sp,
+                fontSize: 13.sp,
                 fontFamily: 'Raleway-Light',
-                color: const Color(0xff727272),
+                color: const Color(0xffD4E1E8),
               ),
             ),
+            shadowColor: const MaterialStatePropertyAll(Colors.black),
             shape: MaterialStatePropertyAll(RoundedRectangleBorder(
-                side: const BorderSide(
-                  color: Color.fromARGB(255, 86, 123, 243),
-                ),
                 borderRadius: BorderRadius.circular(3.w))),
             padding: MaterialStatePropertyAll(
                 EdgeInsets.only(left: 2.w, right: 4.w)),
             trailing: [
               Icon(
                 Icons.search,
-                size: 6.w,
-                color: const Color.fromARGB(255, 86, 123, 243),
+                size: 7.w,
+                color: const Color(0xffD4E1E8),
               )
             ],
             backgroundColor: const MaterialStatePropertyAll(
@@ -66,7 +65,7 @@ class _HomeState extends State<Home> {
           ),
         ),
         Container(
-          height: 28.h,
+          height: 24.h,
           margin: const EdgeInsets.only(top: 8.0),
           alignment: Alignment.center,
           child: Column(
@@ -105,7 +104,7 @@ class _HomeState extends State<Home> {
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             color: _current == entry.key
-                                ? const Color.fromARGB(255, 86, 123, 243)
+                                ? const Color(0xff3797C9)
                                 : Colors.white),
                       ),
                     );
@@ -132,11 +131,8 @@ class _HomeState extends State<Home> {
                     style: ButtonStyle(
                       shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(4.w))),
-                      side: const MaterialStatePropertyAll(
-                        BorderSide(color: Color.fromARGB(255, 86, 123, 243)),
-                      ),
                       backgroundColor:
-                          const MaterialStatePropertyAll(Color(0xff222222)),
+                          const MaterialStatePropertyAll(Color(0xff3C3C3C)),
                     ),
                     onPressed: () {
                       Get.to(() => const MenCategory());
@@ -147,7 +143,7 @@ class _HomeState extends State<Home> {
                       children: [
                         Text(
                           'For Men',
-                          style: TextStyle(fontSize: 8.sp),
+                          style: TextStyle(fontSize: 7.sp),
                         )
                       ],
                     ),
@@ -165,11 +161,8 @@ class _HomeState extends State<Home> {
                     style: ButtonStyle(
                       shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(4.w))),
-                      side: const MaterialStatePropertyAll(
-                        BorderSide(color: Color.fromARGB(255, 86, 123, 243)),
-                      ),
                       backgroundColor:
-                          const MaterialStatePropertyAll(Color(0xff222222)),
+                          const MaterialStatePropertyAll(Color(0xff3C3C3C)),
                     ),
                     onPressed: () {
                       Get.to(() => const WomenCategory());
@@ -180,7 +173,7 @@ class _HomeState extends State<Home> {
                       children: [
                         Text(
                           'For Women',
-                          style: TextStyle(fontSize: 8.sp),
+                          style: TextStyle(fontSize: 7.sp),
                         )
                       ],
                     ),
@@ -198,11 +191,8 @@ class _HomeState extends State<Home> {
                     style: ButtonStyle(
                       shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(4.w))),
-                      side: const MaterialStatePropertyAll(
-                        BorderSide(color: Color.fromARGB(255, 86, 123, 243)),
-                      ),
                       backgroundColor:
-                          const MaterialStatePropertyAll(Color(0xff222222)),
+                          const MaterialStatePropertyAll(Color(0xff3C3C3C)),
                     ),
                     onPressed: () {
                       Get.to(() => const ElectronicsCategory());
@@ -213,7 +203,7 @@ class _HomeState extends State<Home> {
                       children: [
                         Text(
                           'Electronics',
-                          style: TextStyle(fontSize: 8.sp),
+                          style: TextStyle(fontSize: 7.sp),
                         )
                       ],
                     ),
@@ -228,30 +218,33 @@ class _HomeState extends State<Home> {
         ),
         Container(
           alignment: Alignment.center,
-          height: 16.h,
+          height: 18.h,
           margin: EdgeInsets.only(left: 8.w, right: 8.w, top: 4.h, bottom: 2.h),
+          padding: EdgeInsets.only(bottom: 1.h),
           decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 86, 123, 243),
+              color: const Color(0xff3C3C3C),
               borderRadius: BorderRadius.circular(4.w)),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 children: [
                   Container(
-                    margin: EdgeInsets.only(left: 6.w, top: 1.h, bottom: 1.h),
-                    child: const Text(
+                    margin: EdgeInsets.only(left: 4.w, bottom: 1.2.h),
+                    child: Text(
                       'Deals for You',
                       style: TextStyle(
-                          color: Colors.white, fontFamily: 'Raleway-SemiBold'),
+                          color: Colors.white,
+                          fontFamily: 'Raleway-SemiBold',
+                          fontSize: 10.sp),
                     ),
                   ),
                   const Spacer(
                     flex: 1,
                   ),
                   Container(
-                    margin: EdgeInsets.only(right: 6.w),
+                    margin: EdgeInsets.only(right: 3.w, bottom: 1.2.h),
                     child: Icon(
                       Icons.navigate_next_outlined,
                       color: Colors.white,
@@ -261,13 +254,20 @@ class _HomeState extends State<Home> {
                 ],
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
                     height: 10.h,
                     alignment: Alignment.topLeft,
                     decoration: BoxDecoration(
+                        boxShadow: const [
+                          BoxShadow(
+                              color: Color.fromARGB(20, 0, 0, 0),
+                              blurRadius: 4,
+                              spreadRadius: 4,
+                              offset: Offset(0, 4))
+                        ],
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(2.w)),
                     width: 20.w,
@@ -288,7 +288,7 @@ class _HomeState extends State<Home> {
                               right: 1.2.w,
                               left: 1.2.w),
                           decoration: BoxDecoration(
-                              color: Colors.red,
+                              color: const Color(0xff3797C9),
                               borderRadius: BorderRadius.only(
                                   topRight: Radius.circular(2.w),
                                   bottomRight: Radius.circular(2.w))),
@@ -308,6 +308,13 @@ class _HomeState extends State<Home> {
                     height: 10.h,
                     alignment: Alignment.topLeft,
                     decoration: BoxDecoration(
+                        boxShadow: const [
+                          BoxShadow(
+                              color: Color.fromARGB(20, 0, 0, 0),
+                              blurRadius: 4,
+                              spreadRadius: 4,
+                              offset: Offset(0, 4))
+                        ],
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(2.w)),
                     width: 20.w,
@@ -327,7 +334,7 @@ class _HomeState extends State<Home> {
                               right: 1.2.w,
                               left: 1.2.w),
                           decoration: BoxDecoration(
-                              color: Colors.red,
+                              color: const Color(0xff3797C9),
                               borderRadius: BorderRadius.only(
                                   topRight: Radius.circular(2.w),
                                   bottomRight: Radius.circular(2.w))),
@@ -347,6 +354,13 @@ class _HomeState extends State<Home> {
                     height: 10.h,
                     alignment: Alignment.topLeft,
                     decoration: BoxDecoration(
+                        boxShadow: const [
+                          BoxShadow(
+                              color: Color.fromARGB(20, 0, 0, 0),
+                              blurRadius: 4,
+                              spreadRadius: 4,
+                              offset: Offset(0, 4))
+                        ],
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(2.w)),
                     width: 20.w,
@@ -365,7 +379,7 @@ class _HomeState extends State<Home> {
                               right: 1.2.w,
                               left: 1.2.w),
                           decoration: BoxDecoration(
-                              color: Colors.red,
+                              color: const Color(0xff3797C9),
                               borderRadius: BorderRadius.only(
                                   topRight: Radius.circular(2.w),
                                   bottomRight: Radius.circular(2.w))),
